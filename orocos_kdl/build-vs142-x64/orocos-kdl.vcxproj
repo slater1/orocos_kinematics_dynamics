@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E4E5DABE-BA2A-3CF3-A817-C751E8F06136}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>orocos-kdl</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">obj\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">orocos-kdld</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">obj\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">orocos-kdl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\eigen;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\eigen;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\eigen;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\eigen;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\articulatedbodyinertia.cpp" />
+    <ClCompile Include="..\src\chain.cpp" />
+    <ClCompile Include="..\src\chaindynparam.cpp" />
+    <ClCompile Include="..\src\chainfdsolver_recursive_newton_euler.cpp" />
+    <ClCompile Include="..\src\chainfksolverpos_recursive.cpp" />
+    <ClCompile Include="..\src\chainfksolvervel_recursive.cpp" />
+    <ClCompile Include="..\src\chainidsolver_recursive_newton_euler.cpp" />
+    <ClCompile Include="..\src\chainidsolver_vereshchagin.cpp" />
+    <ClCompile Include="..\src\chainiksolverpos_lma.cpp" />
+    <ClCompile Include="..\src\chainiksolverpos_nr.cpp" />
+    <ClCompile Include="..\src\chainiksolverpos_nr_jl.cpp" />
+    <ClCompile Include="..\src\chainiksolvervel_pinv.cpp" />
+    <ClCompile Include="..\src\chainiksolvervel_pinv_givens.cpp" />
+    <ClCompile Include="..\src\chainiksolvervel_pinv_nso.cpp" />
+    <ClCompile Include="..\src\chainiksolvervel_wdls.cpp" />
+    <ClCompile Include="..\src\chainjnttojacdotsolver.cpp" />
+    <ClCompile Include="..\src\chainjnttojacsolver.cpp" />
+    <ClCompile Include="..\src\frameacc.cpp" />
+    <ClCompile Include="..\src\frames.cpp" />
+    <ClCompile Include="..\src\frames_io.cpp" />
+    <ClCompile Include="..\src\framevel.cpp" />
+    <ClCompile Include="..\src\jacobian.cpp" />
+    <ClCompile Include="..\src\jntarray.cpp" />
+    <ClCompile Include="..\src\jntarrayacc.cpp" />
+    <ClCompile Include="..\src\jntarrayvel.cpp" />
+    <ClCompile Include="..\src\jntspaceinertiamatrix.cpp" />
+    <ClCompile Include="..\src\joint.cpp" />
+    <ClCompile Include="..\src\kinfam_io.cpp" />
+    <ClCompile Include="..\src\path.cpp" />
+    <ClCompile Include="..\src\path_circle.cpp" />
+    <ClCompile Include="..\src\path_composite.cpp" />
+    <ClCompile Include="..\src\path_cyclic_closed.cpp" />
+    <ClCompile Include="..\src\path_line.cpp" />
+    <ClCompile Include="..\src\path_point.cpp" />
+    <ClCompile Include="..\src\path_roundedcomposite.cpp" />
+    <ClCompile Include="..\src\rigidbodyinertia.cpp" />
+    <ClCompile Include="..\src\rotational_interpolation.cpp" />
+    <ClCompile Include="..\src\rotational_interpolation_sa.cpp" />
+    <ClCompile Include="..\src\rotationalinertia.cpp" />
+    <ClCompile Include="..\src\segment.cpp" />
+    <ClCompile Include="..\src\trajectory.cpp" />
+    <ClCompile Include="..\src\trajectory_composite.cpp" />
+    <ClCompile Include="..\src\trajectory_segment.cpp" />
+    <ClCompile Include="..\src\trajectory_stationary.cpp" />
+    <ClCompile Include="..\src\tree.cpp" />
+    <ClCompile Include="..\src\treefksolverpos_recursive.cpp" />
+    <ClCompile Include="..\src\treeidsolver_recursive_newton_euler.cpp" />
+    <ClCompile Include="..\src\treeiksolverpos_nr_jl.cpp" />
+    <ClCompile Include="..\src\treeiksolverpos_online.cpp" />
+    <ClCompile Include="..\src\treeiksolvervel_wdls.cpp" />
+    <ClCompile Include="..\src\treejnttojacsolver.cpp" />
+    <ClCompile Include="..\src\utilities\error_stack.cxx" />
+    <ClCompile Include="..\src\utilities\ldl_solver_eigen.cpp" />
+    <ClCompile Include="..\src\utilities\svd_HH.cpp" />
+    <ClCompile Include="..\src\utilities\svd_eigen_HH.cpp" />
+    <ClCompile Include="..\src\utilities\svd_eigen_Macie.cpp" />
+    <ClCompile Include="..\src\utilities\utility.cxx" />
+    <ClCompile Include="..\src\utilities\utility_io.cxx" />
+    <ClCompile Include="..\src\velocityprofile.cpp" />
+    <ClCompile Include="..\src\velocityprofile_dirac.cpp" />
+    <ClCompile Include="..\src\velocityprofile_rect.cpp" />
+    <ClCompile Include="..\src\velocityprofile_spline.cpp" />
+    <ClCompile Include="..\src\velocityprofile_trap.cpp" />
+    <ClCompile Include="..\src\velocityprofile_traphalf.cpp" />
+    <ClInclude Include="..\src\config.h.in" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
