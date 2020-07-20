@@ -37,8 +37,10 @@ namespace KDL
     {
     public:
 
+#ifndef SWIG
         EIGEN_MAKE_ALIGNED_OPERATOR_NEW
         Eigen::Matrix<double,6,Eigen::Dynamic> data;
+#endif
         Jacobian();
         explicit Jacobian(unsigned int nr_of_columns);
         Jacobian(const Jacobian& arg);
